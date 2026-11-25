@@ -27,6 +27,11 @@ public class ticketController {
         return ResponseEntity.ok(service.listarTickets(estado, categoria, solicitante, asignadoA));
     }
 
+    @GetMapping("/")
+    public String inicio() {
+        return "API de Tickets activa. Usa /api/tickets para consultar o crear tickets.";
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<ticketEntity> obtenerPorId(@PathVariable Long id) {
         return service.obtenerPorId(id)
