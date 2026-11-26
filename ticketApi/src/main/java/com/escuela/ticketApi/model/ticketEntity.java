@@ -51,7 +51,7 @@ public class ticketEntity {
     @Column(length = 2000)
     private String comentarios;
 
-    @Column(length = 1000)
+    @Column(columnDefinition = "TEXT")
     private String fotoUrl;
 
     private LocalDateTime fechaCreacion;
@@ -68,5 +68,3 @@ public class ticketEntity {
         this.fechaActualizacion = LocalDateTime.now();
     }
 }
-
-
